@@ -3,7 +3,7 @@ export interface LinkedinProfile {
   full_name: string;
   connections: number;
   headline?: string;
-  profile_image_url?: string;
+  profile_image?: string;
   linkedin_url: string;
   about?: string;
   location?: string;
@@ -11,17 +11,17 @@ export interface LinkedinProfile {
   total_votes: number;
   created_at: string;
   updated_at: string;
+  experiences?: LinkedinExperience[];
+  projects?: LinkedinProject[];
+  aiAnalysis?: string | null;
 }
 
 export interface LinkedinExperience {
   id: string;
   profile_id: string;
-  position_title: string;
-  company_name: string;
-  description?: string;
-  start_date?: string;
-  end_date?: string;
-  location?: string;
+  title: string;
+  company: string;
+  duration?: string;
   created_at: string;
 }
 
